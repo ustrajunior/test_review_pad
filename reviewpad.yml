@@ -3,7 +3,7 @@ api-version: reviewpad.com/v3.x
 rules:
   - name: changed-router
     description: Patch contains changes to the router
-    spec: '$$hasFileName("router.ex")'
+    spec: '$hasFilePattern("**/router.ex")'
 
 workflows:
   - name: comment-on-router-changes
