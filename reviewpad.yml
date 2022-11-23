@@ -1,0 +1,16 @@
+api-version: reviewpad.com/v3.x
+
+labels:
+    small:
+        color: 294b69
+    medium:
+        color: a8c3f7
+    large:
+        color: 8a2138
+
+workflows:
+    - name: label-pull-request-with-size
+      if:
+          - rule: '$$hasFileName("router.ex")'
+            extra-actions:
+                - $warn("changed")
